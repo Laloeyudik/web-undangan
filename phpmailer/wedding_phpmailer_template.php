@@ -60,7 +60,7 @@ try {
 
     //Recipients
     $mail->setFrom('preyword@gmail.com', 'Undangan Acara Tasyakuran Pernikahan');
-    $mail->addAddress('99laluwahyudi@gmail.com', 'M. Rizal');
+    $mail->addAddress('usmawati091@gmail.com', 'M. Rizal');
     $mail->addReplyTo('noreply@gmail.com', 'Tidak Menerima Balasan');
 
     $mail->isHTML(true);
