@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Imno - Participation and Registration Wizard Form for Events, Conference, Workshop, Courses, Seminar, Virtual Event, Wedding"
+    />
+    <meta name="author" content="Ansonika" />
+    <title>Undangan Acara Tasyakuran Pernikahan</title>
+
+    <!-- Favicons-->
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" /> -->
+    <!-- <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      href="img/apple-touch-icon-57x57-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="72x72"
+      href="img/apple-touch-icon-72x72-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="114x114"
+      href="img/apple-touch-icon-114x114-precomposed.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/x-icon"
+      sizes="144x144"
+      href="img/apple-touch-icon-144x144-precomposed.png"
+    /> -->
+
+    <!-- GOOGLE WEB FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/style_wedding.css" rel="stylesheet" />
+    <link href="css/vendors.css" rel="stylesheet" />
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <!-- MODERNIZR MENU -->
+    <script src="js/modernizr.js"></script>
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div data-loader="circle-side"></div>
+    </div>
+    <!-- /Preload -->
+
+    <div id="loader_form">
+      <div data-loader="circle-side-2"></div>
+    </div>
+    <!-- /loader_form -->
+
+    <div class="container-fluid">
+      <div class="row row-height">
+        <div
+          class="col-lg-6 background-image p-0"
+          data-background="url(img/main_img_1.jpg)"
+        >
+          <div
+            class="content-left-wrapper opacity-mask d-flex align-items-center text-center justify-content-center"
+            data-opacity-mask="rgba(0, 0, 0, 0.05)"
+          >
+            <!-- <a href="#0" id="logo"
+              ><img src="img/logo.png" alt="" width="44" height="44"
+            /></a> -->
+            <div class="social">
+              <ul>
+                <li>
+                  <a href="#0"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="bi bi-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /social -->
+            <div>
+              <h1>
+                <!-- Kami mengundang Bpk/Ibu/Sdr dalam acara “Tasyakkuran“ atas
+                pernikahan putra-putri Kami yang insya Allah akan dilaksanakan
+                nanti -->
+
+                <small>Kami mengundang Bpk/Ibu/Sdr dalam</small> Acara
+                “Tasyakkuran“ atas Pernikahan putra-putri Kami<em
+                  >Rizal Muzaki dan Usmawati</em
+                >
+                <!-- <small>Kami dengan senang hati mengundang Anda ke</small> Acara
+                Perayaan pernikahan<em>M. Rizal dan Usmawati</em> -->
+              </h1>
+              <div class="countdown">
+                <h4>14 Juli 2024 at 8.30am</h4>
+                <div class="container_count">
+                  <div id="days">00</div>
+                  Hari
+                </div>
+                <div class="container_count">
+                  <div id="hours">00</div>
+                  Jam
+                </div>
+                <div class="container_count">
+                  <div id="minutes">00</div>
+                  Menit
+                </div>
+                <div class="container_count last">
+                  <div id="seconds">00</div>
+                  Detik
+                </div>
+              </div>
+              <p><a href="#panel_info" class="btn_info">Program Acara</a></p>
+            </div>
+            <a
+              class="smoothscroll btn_scroll_to Bounce infinite"
+              href="#wizard_container"
+              ><i class="bi bi-arrow-down-short"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-flex flex-column content-right">
+          <div class="container my-auto py-5">
+            <div class="row">
+              <div class="col-lg-9 col-xl-7 mx-auto">
+                <div id="wizard_container">
+                  <div id="top-wizard">
+                    <span id="location"></span>
+                    <div id="progressbar"></div>
+                  </div>
+                  <!-- /top-wizard -->
+                  <form
+                    id="wrapped"
+                    method="POST"
+                    action="phpmailer/wedding_phpmailer_template.php"
+                  >
+                    <input id="website" name="website" type="text" value="" />
+                    <!-- Leave for security protection, read docs for details -->
+                    <div id="middle-wizard">
+                      <div class="step">
+                        <h3 class="main_question">
+                          Mohon Isi Data Diri Anda Dengan Lengkap
+                        </h3>
+                        <div class="mb-3 form-floating">
+                          <input
+                            type="text"
+                            name="firstname"
+                            id="firstname"
+                            class="form-control required"
+                            placeholder="Nama Depan"
+                          />
+                          <label for="firstname">Nama Depan</label>
+                        </div>
+                        <div class="mb-3 form-floating">
+                          <input
+                            type="text"
+                            name="lastname"
+                            id="lastname"
+                            class="form-control required"
+                            placeholder="Nama Belakang"
+                          />
+                          <label for="lastname">Nama Belakang</label>
+                        </div>
+                        <div class="mb-3 form-floating">
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            class="form-control required"
+                            placeholder="Email Anda"
+                          />
+                          <label for="email">Email Active</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                          <input
+                            type="text"
+                            name="telephone"
+                            id="telephone"
+                            class="form-control"
+                            placeholder="Nomor Telepon Anda"
+                          />
+                          <label for="telephone">No. Hp/ Wa</label>
+                        </div>
+                      </div>
+                      <!-- /step-->
+                      <div class="step">
+                        <h3 class="main_question">
+                          Berapa banyak tamu yang akan datang bersama Anda?
+                        </h3>
+                        <div class="row justify-content-center mt-3">
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <div class="qty-buttons">
+                                <input
+                                  type="button"
+                                  value="+"
+                                  class="qtyplus"
+                                  name="adults"
+                                />
+                                <input
+                                  type="text"
+                                  name="adults"
+                                  id="adults"
+                                  value="Dewasa"
+                                  class="qty form-control required"
+                                  placeholder="Dewasa"
+                                />
+                                <input
+                                  type="button"
+                                  value="-"
+                                  class="qtyminus"
+                                  name="adults"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                              <div class="qty-buttons">
+                                <input
+                                  type="button"
+                                  value="+"
+                                  class="qtyplus"
+                                  name="child"
+                                />
+                                <input
+                                  type="text"
+                                  name="child"
+                                  id="child"
+                                  value=""
+                                  class="qty form-control required"
+                                  placeholder="Anak-anak"
+                                />
+                                <input
+                                  type="button"
+                                  value="-"
+                                  class="qtyminus"
+                                  name="child"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-3 form-group form-floating">
+                          <textarea
+                            name="additional_notes"
+                            id="additional_notes"
+                            class="form-control"
+                            placeholder="Catatan tambahan"
+                          ></textarea>
+                          <label for="additional_notes">Catatan Tambahan</label>
+                        </div>
+                      </div>
+                      <!-- /step-->
+                      <div class="step">
+                        <h3 class="main_question">
+                          Silakan pilih opsi kehadiran
+                        </h3>
+                        <div class="list_block">
+                          <ul>
+                            <li>
+                              <div class="checkbox_radio_container">
+                                <input
+                                  type="checkbox"
+                                  id="question_1_opt_1"
+                                  name="question_1[]"
+                                  class="required"
+                                  value="Upacara Pernikahan"
+                                />
+                                <label
+                                  class="checkbox"
+                                  for="question_1_opt_1"
+                                ></label>
+                                <label for="question_1_opt_1" class="wrapper"
+                                  >Upacara Pernikahan
+                                </label>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="checkbox_radio_container">
+                                <input
+                                  type="checkbox"
+                                  id="question_1_opt_2"
+                                  name="question_1[]"
+                                  class="required"
+                                  value="Datang Lebih Awal"
+                                />
+                                <label
+                                  class="checkbox"
+                                  for="question_1_opt_2"
+                                ></label>
+                                <label for="question_1_opt_2" class="wrapper"
+                                  >Datang Lebih Awal</label
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="checkbox_radio_container">
+                                <input
+                                  type="checkbox"
+                                  id="question_1_opt_3"
+                                  name="question_1[]"
+                                  class="required"
+                                  value="Mungkin Datang Tidak Terlambat (karena ada urusan penting)"
+                                />
+                                <label
+                                  class="checkbox"
+                                  for="question_1_opt_3"
+                                ></label>
+                                <label for="question_1_opt_3" class="wrapper"
+                                  >Mungkin Datang Tidak Terlambat (karena ada
+                                  urusan penting)</label
+                                >
+                              </div>
+                            </li>
+                            <li>
+                              <div class="checkbox_radio_container">
+                                <input
+                                  type="checkbox"
+                                  id="question_1_opt_4"
+                                  name="question_1[]"
+                                  class="required"
+                                  value="Usahakan Tepat Waktu"
+                                />
+                                <label
+                                  class="checkbox"
+                                  for="question_1_opt_4"
+                                ></label>
+                                <label for="question_1_opt_4" class="wrapper"
+                                  >Usahakan Tepat Waktu</label
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                          <p>
+                            <small
+                              ><em
+                                >(Pilih beberapa opsi jika diperlukan) *</em
+                              ></small
+                            >
+                          </p>
+                        </div>
+                      </div>
+                      <!-- /step-->
+                      <div class="submit step">
+                        <div class="summary">
+                          <div class="wrapper">
+                            <h3>Thank you<br />atas waktunya!</h3>
+                            <p>
+                              Kami sangat menghargai perhatian Anda dan berharap
+                              dapat bertemu dan Mengahadiri Acara sederhana
+                              kami. Dengan Hormat Kmai segera menghubungi Anda
+                              dan mengirimkan ringkasan informasi ke alamat
+                              email.
+                            </p>
+                          </div>
+                          <div class="text-center">
+                            <div class="form-group terms">
+                              <label class="container_check"
+                                >Please accept our
+                                <a
+                                  href="#"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#terms-txt"
+                                  >Privacy terms</a
+                                >
+                                before Submit
+                                <input
+                                  type="checkbox"
+                                  name="terms"
+                                  value="Yes"
+                                  class="required"
+                                />
+                                <span class="checkmark"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /step-->
+                    </div>
+                    <!-- /middle-wizard -->
+                    <div id="bottom-wizard">
+                      <button type="button" name="backward" class="backward">
+                        Prev
+                      </button>
+                      <button type="button" name="forward" class="forward">
+                        Next
+                      </button>
+                      <button type="submit" name="process" class="submit">
+                        Submit
+                      </button>
+                    </div>
+                    <!-- /bottom-wizard -->
+                  </form>
+                </div>
+                <!-- /Wizard container -->
+              </div>
+            </div>
+          </div>
+          <div class="container pb-4 copy">
+            <span class="float-start"></span>
+            <a class="btn_help float-end" href="#" id="modal_h"
+              ><i class="bi bi-question-circle"></i> Help</a
+            ><br />
+            <div class="social mobile">
+              <ul>
+                <li>
+                  <a href="#0"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#0"><i class="bi bi-instagram"></i></a>
+                </li>
+              </ul>
+            </div>
+            <!-- /social -->
+          </div>
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+
+    <nav>
+      <ul class="cd-primary-nav">
+        <li>
+          <a href="index.html" class="animated_link">Rizal Muzaki & Usmawati</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /menu -->
+
+    <div class="cd-overlay-nav">
+      <span></span>
+    </div>
+    <!-- /cd-overlay-nav -->
+
+    <div class="cd-overlay-content">
+      <span></span>
+    </div>
+    <!-- /cd-overlay-content -->
+
+    <a href="#0" class="cd-nav-trigger">Menu<span class="cd-icon"></span></a>
+    <!-- /menu button -->
+
+    <div class="panel" id="panel_info">
+      <div class="panel__content">
+        <a href="#" class="close_panel">
+          <i class="bi bi-x-circle"></i>
+        </a>
+        <div class="container">
+          <h2 class="mb-5">Ketentuan Acara</h2>
+          <div class="strip_info">
+            <div class="row">
+              <div class="col-lg-3">
+                <h3>Waktu Pelaksanaan</h3>
+              </div>
+              <div class="col-lg-3">
+                <p class="date_event">
+                  Ahad, 14 Juli 2024 <small>08.30am - selesai</small>
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p>
+                  <strong>Assalamu Alaikum Wr. Wb</strong><br />
+                  Dengan memohon Ridho dan rahmat Allah SWT.<br />
+                  Kami mengundang Bpk/Ibu/Sdr dalam acara “Tasyakkuran“ atas
+                  pernikahan putra-putri Kami yang insya Allah akan dilaksanakan
+                  pada waktu yang tercantum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="strip_info">
+            <div class="row">
+              <div class="col-lg-3">
+                <h3>Acara Nyongkolan</h3>
+              </div>
+              <div class="col-lg-3">
+                <p class="date_event">
+                  Ahad, 14 Juli 2024 <small>15.00pm - Selesai</small>
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p>
+                  <strong>Dengan Hormat,</strong><br />
+                  Kami Mengundang Remaja/i Dusun Guesa Tengah Untuk mengikuti
+                  bagian dari acara kami "Nyongkolan" dengan waktu yang
+                  ditentukan.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="strip_info">
+            <div class="row">
+              <div class="col-lg-3">
+                <h3>After Dinner Party</h3>
+              </div>
+              <div class="col-lg-3">
+                <p class="date_event">
+                  18.10.2023 <small>11.30pm - 03.00am</small>
+                </p>
+              </div>
+              <div class="col-lg-6">
+                <p>
+                  Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+                  amet, consectetur, adipisci velit, sed quia non numquam eius
+                  modi tempora incidunt ut labore et dolore magnam aliquam
+                  quaerat voluptatem.
+                </p>
+              </div>
+            </div>
+          </div> -->
+
+          <div class="row mt-5 d-flex align-items-center">
+            <div class="col-lg-6">
+              <div class="map_contact">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d937.1855551696117!2d116.11155353281163!3d-8.702733090410483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNDInMDguNiJTIDExNsKwMDYnNDMuNiJF!5e1!3m2!1sid!2sid!4v1720588922255!5m2!1sid!2sid"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <h5 class="mb-3">Alamat</h5>
+                  <div class="list_icons">
+                    <ul>
+                      <li>
+                        <i class="bi bi-geo-alt"></i> Gumesa Tengah, Desa Giri
+                        Tembesi Kec. Gerung Lobar <br /><a
+                          href="https://maps.app.goo.gl/y66gAtHT9yLcK89r6"
+                          target="_blank"
+                          >Buka Map</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h5 class="mb-3">Info Kontak</h5>
+                  <div class="list_icons">
+                    <ul>
+                      <li>
+                        <i class="bi bi-telephone"></i>
+                        <a
+                          href="https://api.whatsapp.com/send?phone=6285338742843&text=assalamualaikum🙏"
+                          >(+62) 8533 8742 843</a
+                        >
+                      </li>
+                      <li>
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:event@domain.com"
+                          >usmawati091@gmail.com</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /panel_info  -->
+
+    <!-- Modal terms -->
+    <div
+      class="modal fade"
+      id="terms-txt"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="termsLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="termsLabel">Etika Dan Sopan Santun</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+             # Utamakan sopan santun kepada semua orang dan tebarkan senyum.
+            </p>
+            <p>
+             # Berpakai yang sopan dan santun
+            </p>
+            <p>
+             # Kami Minta Doa Demi Kelancaran Acara Kami
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn_1" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- Help form Popup -->
+    <div id="modal-help" class="custom-modal zoom-anim-dialog mfp-hide">
+      <div class="small-dialog-header">
+        <h3>Ask Us Anything</h3>
+        <p class="mb-3">
+          Please fill the form with your questions and<br />we will reply soon!
+        </p>
+      </div>
+      <div id="message-help"></div>
+      <form
+        method="post"
+        action="phpmailer/help.php"
+        id="helpform"
+        autocomplete="off"
+      >
+        <div class="modal-wrapper">
+          <div class="mb-3 form-floating">
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              class="form-control"
+              placeholder="Full Name"
+            />
+            <label for="fullname">Full Name</label>
+          </div>
+          <div class="mb-3 form-floating">
+            <input
+              type="email"
+              name="email_help"
+              id="email_help"
+              class="form-control"
+              placeholder="Email Address"
+            />
+            <label for="email_help">Email Address</label>
+          </div>
+          <div class="mb-3 form-floating">
+            <textarea
+              name="message_help"
+              id="message_help"
+              class="form-control short"
+              placeholder="Your Message"
+            ></textarea>
+            <label for="message_help">Your Message</label>
+          </div>
+          <div class="mb-5 form-floating">
+            <input
+              class="form-control"
+              type="text"
+              name="verify_help"
+              id="verify_help"
+              placeholder="Are you human? 3 + 1 ="
+            />
+            <label for="verify_help">Are you human? 3 + 1 =</label>
+          </div>
+          <div class="text-center submit">
+            <input
+              type="submit"
+              value="Submit"
+              class="btn_1"
+              id="submit-help"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- /Help form Popup -->
+
+    <!-- COMMON SCRIPTS -->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+    <script src="js/velocity.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="phpmailer/validate.js"></script>
+  </body>
+</html>
